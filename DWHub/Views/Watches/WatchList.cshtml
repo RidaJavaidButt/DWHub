@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DWHub.Models.Watch>
+
+@{
+    ViewData["Title"] = "WatchList";
+}
+
+
+ 
+
+
+
+<div class="row">
+    @foreach (var watch in Model)
+    {
+        <div id="main" class="col-lg-4 col-md-6 col-sm-12">
+            <img id="image1" src="@watch.URL" alt="Loading" />
+            <span id="title">@watch.Title</span>
+            <span id="price">@watch.Price</span>
+            <span id="inputval"><input id="inputval2" type="number" name="quantity" value="" placeholder="0" /></span>
+            <span id="cart"><button id="btn">Add To Cart</button></span>
+        </div>
+    }
+</div>
